@@ -14,6 +14,12 @@ La infraestructura está compuesta por los siguientes componentes:
 
 ## Tecnologías Utilizadas
 
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+![ECS](https://img.shields.io/badge/ECS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7A3E1B?style=for-the-badge&logo=terraform&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+
 - **Terraform**: Para definir y provisionar los recursos en AWS como código (IaC).
 - **Amazon ECS (Elastic Container Service)**: Para la orquestación de contenedores.
 - **Amazon RDS**: Base de datos PostgreSQL gestionada.
