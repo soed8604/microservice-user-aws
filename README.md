@@ -34,26 +34,55 @@ La infraestructura está compuesta por los siguientes componentes:
 - **Node.js**: Para el backend de la aplicación.
 - **PostgreSQL**: Base de datos relacional.
 
-## Instalación
+## Prerrequisitos para ejecutar los servicios localmente
+- [Docker](https://docs.docker.com/get-docker/) (versión 20 o superior)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) configurado con tus credenciales
 
-1. Clona este repositorio en tu máquina local:
+## 🖥 Proceso para ejecutar en local
+
+1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-2. Navega a la carpeta del proyecto:
+   git clone https://github.com/usuario/repositorio.git
+   cd repositorio
+2. Construir y levantar los servicios con Docker Compose:
    ```bash
-   cd tu_repositorio
-3. Inicializa Terraform:
+   docker-compose up --build
+3. Verificar que los servicios estén corriendo:
    ```bash
-   terraform init
-4. Aplica la infraestructura de Terraform:
+   Aplicación: http://localhost:8086
+   
+☁ Proceso para correrlo en la nube de AWS
+
+1. **Clonar el repositorio**:
    ```bash
-   terraform apply
-5. Para construir y subir la imagen Docker a ECR:
+   git clone https://github.com/usuario/repositorio.git
+   cd repositorio # directorio Infra
+
+2. Construir la imagen Docker:
     ```bash
-   docker build -t <nombre_imagen> .
-   docker tag <nombre_imagen> <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<nombre_repositorio>:latest
-   aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
-   docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<nombre_repositorio>:latest
+   docker build -t nombre-imagen .
+
+3. Etiquetar la imagen para ECR:
+   ```bash
+   docker tag nombre-imagen:latest <account-id>.dkr.ecr.<region>.amazonaws.com/nombre-repo:latest
+4. Autenticarse en ECR:
+   ```bash
+     aws ecr get-login-password --region <region> \ |
+     docker login --username AWS --password-stdin <account-id>.dkr.ecr.<region>.amazonaws.com
+5. Subir la imagen a ECR:
+   ```bash
+   docker push <account-id>.dkr.ecr.<region>.amazonaws.com/nombre-repo:latest
+6. Verificar los servicio en ECS:
+- Ir a Amazon ECS en la consola de AWS
+- Seleccionar el cluster
+- Editar el servicio para usar la nueva imagen
+- Guardar cambios y esperar el despliegue
+7. Verificar el acceso vía Load Balancer:
+- Obtener la URL pública del Application Load Balancer en la consola de AWS
+- En la cmd o terminal ejecutar el comando **nslookup** y la url del load balancer para obtener la ip 
+- Acceder a la aplicación desde el navegador por medio **http**
+
 ## Buenas Prácticas
 
 - **Seguridad**: Utilizamos **IAM Roles** con permisos mínimos necesarios y almacenamos las credenciales de la base de datos en **AWS Secrets Manager**.
