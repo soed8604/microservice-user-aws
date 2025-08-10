@@ -1,4 +1,4 @@
-# Proyecto de Infraestructura en la Nube con Terraform y AWS
+# ☁️ Infraestructura como Servicio: Del Local a AWS
 
 Este proyecto utiliza **Terraform** para provisionar una infraestructura en la nube en **AWS**. La infraestructura está diseñada para desplegar una aplicación de microservicios utilizando **Amazon ECS (Elastic Container Service)**, **Amazon RDS (Relational Database Service)**, **Amazon ALB (Application Load Balancer)**, **Amazon ECR (Elastic Container Registry)** y **AWS Secrets Manager**.
 
