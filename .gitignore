@@ -1,0 +1,31 @@
+# Ignorar los archivos y directorios de Terraform en el directorio 'infra'
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.backup
+infra/*.tfvars
+
+# Ignorar cualquier archivo de log que pueda generarse
+*.log
+
+# Ignorar archivos temporales o de configuración local
+*.bak
+*.swp
+
+# Ignorar cualquier archivo generado que no sea necesario (por ejemplo, proveedor AWS)
+infra/envs/dev/.terraform/providers/
+
+
+# Ignorar node_modules
+node_modules/
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de configuración local de npm
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignorar archivos específicos de OS
+.DS_Store
+Thumbs.db
