@@ -1,0 +1,31 @@
+# Ignorar archivos de Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Ignorar proveedores de Terraform
+.terraform/providers/
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos de configuración local de Terraform
+.terraform.lock.hcl
+
+# Ignorar el archivo del proveedor AWS grande
+infra/envs/dev/.terraform/providers/registry.terraform.io/hashicorp/aws/*
+
+# Ignorar node_modules
+node_modules/
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de configuración local de npm
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignorar archivos específicos de OS
+.DS_Store
+Thumbs.db
