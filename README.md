@@ -4,7 +4,7 @@ Este proyecto utiliza **Terraform** para provisionar una infraestructura en la n
 
 ## 🖼️ Diagrama de Arquitectura
 
-![Diagrama de Arquitectura](https://github.com/user-attachments/assets/70dd2e53-85cb-4694-8716-0ab6ac70e8bb)
+![Diagrama de Arquitectura](https://github.com/user-attachments/assets/9ac29dc1-8b60-454f-aa51-dfce0506d59c)
 
 ## Arquitectura
 
