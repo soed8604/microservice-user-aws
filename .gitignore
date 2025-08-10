@@ -1,19 +1,19 @@
-# Ignorar archivos de Terraform
-.terraform/
-*.tfstate
-*.tfstate.backup
+# Ignorar los archivos y directorios de Terraform en el directorio 'infra'
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.backup
+infra/*.tfvars
 
-# Ignorar proveedores de Terraform
-.terraform/providers/
-
-# Ignorar archivos de log
+# Ignorar cualquier archivo de log que pueda generarse
 *.log
 
-# Ignorar archivos de configuración local de Terraform
-.terraform.lock.hcl
+# Ignorar archivos temporales o de configuración local
+*.bak
+*.swp
 
-# Ignorar el archivo del proveedor AWS grande
-infra/envs/dev/.terraform/providers/registry.terraform.io/hashicorp/aws/*
+# Ignorar cualquier archivo generado que no sea necesario (por ejemplo, proveedor AWS)
+infra/envs/dev/.terraform/providers/
+
 
 # Ignorar node_modules
 node_modules/
