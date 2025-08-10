@@ -2,6 +2,10 @@
 
 Este proyecto utiliza **Terraform** para provisionar una infraestructura en la nube en **AWS**. La infraestructura está diseñada para desplegar una aplicación de microservicios utilizando **Amazon ECS (Elastic Container Service)**, **Amazon RDS (Relational Database Service)**, **Amazon ALB (Application Load Balancer)**, **Amazon ECR (Elastic Container Registry)** y **AWS Secrets Manager**.
 
+## 🖼️ Diagrama de Arquitectura
+
+![Diagrama de Arquitectura](https://github.com/user-attachments/assets/1d1168c5-36ab-4f3a-b268-bd1d08495824)
+
 ## Arquitectura
 
 La infraestructura está compuesta por los siguientes componentes:
