@@ -74,14 +74,14 @@ La infraestructura está compuesta por los siguientes componentes:
    ```bash
    docker push <account-id>.dkr.ecr.<region>.amazonaws.com/nombre-repo:latest
 6. Verificar los servicio en ECS:
-- Ir a Amazon ECS en la consola de AWS
-- Seleccionar el cluster
-- Editar el servicio para usar la nueva imagen
-- Guardar cambios y esperar el despliegue
+   - Ir a Amazon ECS en la consola de AWS
+   - Seleccionar el cluster
+   - Editar el servicio para usar la nueva imagen
+   - Guardar cambios y esperar el despliegue
 7. Verificar el acceso vía Load Balancer:
-- Obtener la URL pública del Application Load Balancer en la consola de AWS
-- En la cmd o terminal ejecutar el comando **nslookup** y la url del load balancer para obtener la ip 
-- Acceder a la aplicación desde el navegador por medio **http**
+   - Obtener la URL pública del Application Load Balancer en la consola de AWS
+   - En la cmd o terminal ejecutar el comando **nslookup** y la url del load balancer para obtener la ip 
+   - Acceder a la aplicación desde el navegador por medio **http**
 
 ## Buenas Prácticas
 
