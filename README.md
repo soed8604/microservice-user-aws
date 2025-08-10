@@ -52,7 +52,7 @@ La infraestructura está compuesta por los siguientes componentes:
    ```bash
    Aplicación: http://localhost:8086
    
-☁ Proceso para correrlo en la nube de AWS
+## ☁ Proceso para correrlo en la nube de AWS
 
 1. **Clonar el repositorio**:
    ```bash
